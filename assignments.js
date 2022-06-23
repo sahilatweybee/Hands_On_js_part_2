@@ -38,4 +38,14 @@ India = percentageOfWorld3(1400);
 Austrailia = percentageOfWorld3(25.7);
 Finland = percentageOfWorld3(5.53);
 
-console.log(`${India} \t ${Austrailia} \t ${Finland} \n ${UK} \t ${USA} \t ${Russia} \n `);
+console.log(`\n${India} \t ${Austrailia} \t ${Finland} \n ${UK} \t ${USA} \t ${Russia} \n `);
+
+// Lecture: Functions Calling Other Functions
+function describePopulation (country, population){
+    return `\n${country} has ${population} million people which is about ${percentageOfWorld2(population)}% of the world.`;
+} 
+
+let Chinese = describePopulation("China", 1441);
+let Indian = describePopulation("India", 1400);
+let American = describePopulation("USA", 329.5);
+console.log(`${Chinese} \n ${Indian} \n ${American}`);
